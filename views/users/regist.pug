@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+  h1 ユーザ登録
+  form(method='POST', action='/users/regist')
+    //CSRFトークン
+    input(type="hidden" name="_csrf" value=csrfToken)
+    .form-group
+      label Name:
+      input.form-control(name='name', type='text')
+    br
+    input.btn.btn-primary(type='submit', value='Submit')

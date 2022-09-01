@@ -1,0 +1,10 @@
+extends ../layout
+
+block content
+  h1 ユーザ詳細
+  form
+    .form-group
+      label Name:
+      input.form-control(name='name', type='text', value=user.name, readonly)
+  hr
+  a(href='/users') ユーザ一覧

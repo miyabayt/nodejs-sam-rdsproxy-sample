@@ -1,0 +1,10 @@
+extends ../layout
+
+block content
+  h1 ユーザ一覧
+  ul.list-group
+    each user, i in users
+      li.list-group-item
+        a(href='/users/' + user.id)= user.name
+  hr
+  a(href='/users/regist') ユーザ登録
